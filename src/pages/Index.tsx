@@ -1,12 +1,56 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from '@/components/layout/Navigation';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { AboutSection } from '@/components/sections/AboutSection';
+import { SkillsSection } from '@/components/sections/SkillsSection';
+import { SocialCampaignsSection } from '@/components/sections/SocialCampaignsSection';
+import { PostDesignSection } from '@/components/sections/PostDesignSection';
+import { FrontendProjectsSection } from '@/components/sections/FrontendProjectsSection';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { ContactSection } from '@/components/sections/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      
+      <main>
+        <HeroSection />
+        
+        <section id="about">
+          <AboutSection />
+        </section>
+        
+        <section id="skills">
+          <SkillsSection />
+        </section>
+        
+        <section id="campaigns">
+          <SocialCampaignsSection />
+        </section>
+        
+        <section id="design">
+          <PostDesignSection />
+        </section>
+        
+        <section id="projects">
+          <FrontendProjectsSection />
+        </section>
+        
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
+        
+        <section id="contact">
+          <ContactSection />
+        </section>
+      </main>
+      
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-8 px-6 text-center">
+        <p className="text-sm">
+          © 2024 Portfolio. Crafted with passion and precision.
+        </p>
+      </footer>
     </div>
   );
 };
