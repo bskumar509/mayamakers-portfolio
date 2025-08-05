@@ -4,13 +4,6 @@ import { ArrowDown, Download, Mail } from 'lucide-react';
 import heroImage from '@/assets/hero-bg.jpg';
 
 export const HeroSection = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -37,7 +30,7 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-            <GradientButton size="lg" onClick={scrollToContact} className="group">
+            <GradientButton size="lg" className="group">
               <Mail className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
               Get In Touch
             </GradientButton>
