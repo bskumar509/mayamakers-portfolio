@@ -2,7 +2,6 @@ import { Navigation } from '@/components/layout/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
-import { SocialCampaignsSection } from '@/components/sections/SocialCampaignsSection';
 import { PostDesignSection } from '@/components/sections/PostDesignSection';
 import { FrontendProjectsSection } from '@/components/sections/FrontendProjectsSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
@@ -22,10 +21,6 @@ const Index = () => {
         
         <section id="skills">
           <SkillsSection />
-        </section>
-        
-        <section id="campaigns">
-          <SocialCampaignsSection />
         </section>
         
         <section id="design">
