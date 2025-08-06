@@ -1,7 +1,7 @@
 import { AnimatedRole } from '@/components/ui/animated-role';
 import { GradientButton } from '@/components/ui/gradient-button';
 import { ArrowDown, Download, Mail } from 'lucide-react';
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '@/assets/hero-bg-new.jpg';
 
 export const HeroSection = () => {
   const scrollToContact = () => {
