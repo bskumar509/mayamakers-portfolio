@@ -4,39 +4,6 @@ import { GradientButton } from '@/components/ui/gradient-button';
 import { ExternalLink, TrendingUp, Users, Heart } from 'lucide-react';
 import socialCampaignsImage from '@/assets/social-campaigns.jpg';
 
-const campaigns = [
-  {
-    title: 'Diwali Festival Campaign',
-    description: 'A culturally sensitive celebration campaign that increased engagement by 340% across diverse communities.',
-    metrics: [
-      { label: 'Engagement Rate', value: '+340%' },
-      { label: 'Reach', value: '2.5M' },
-      { label: 'Cultural Accuracy', value: '98%' }
-    ],
-    tags: ['Cultural Sensitivity', 'Festival Marketing', 'Community Engagement']
-  },
-  {
-    title: 'Ramadan Unity Campaign',
-    description: 'Cross-platform campaign promoting unity and understanding during Ramadan, featuring diverse voices.',
-    metrics: [
-      { label: 'Shares', value: '+520%' },
-      { label: 'Positive Sentiment', value: '96%' },
-      { label: 'Community Growth', value: '+45%' }
-    ],
-    tags: ['Interfaith Dialogue', 'Community Building', 'Authentic Storytelling']
-  },
-  {
-    title: 'Lunar New Year Series',
-    description: 'Multi-generational campaign celebrating traditions while embracing modern perspectives.',
-    metrics: [
-      { label: 'Video Views', value: '1.8M' },
-      { label: 'Save Rate', value: '+280%' },
-      { label: 'Cross-Generation Appeal', value: '92%' }
-    ],
-    tags: ['Tradition Meets Modern', 'Video Content', 'Generational Bridge']
-  }
-];
-
 export const SocialCampaignsSection = () => {
   return (
     <section className="py-20 px-6 bg-gradient-subtle">
@@ -58,58 +25,6 @@ export const SocialCampaignsSection = () => {
             <h3 className="text-2xl font-bold mb-2">Festival Campaign Portfolio</h3>
             <p className="text-lg opacity-90">Celebrating diversity through thoughtful design</p>
           </div>
-        </div>
-        
-        {/* Campaigns Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {campaigns.map((campaign, index) => (
-            <Card 
-              key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors">
-                  {campaign.title}
-                </h3>
-                <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
-              </div>
-              
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {campaign.description}
-              </p>
-              
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {campaign.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="text-center">
-                    <div className="text-2xl font-bold text-primary mb-1">
-                      {metric.value}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {metric.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {campaign.tags.map((tag, tagIndex) => (
-                  <span 
-                    key={tagIndex}
-                    className="px-3 py-1 bg-accent text-accent-foreground rounded-full text-xs font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              
-              <GradientButton variant="ghost" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-                View Campaign Details
-              </GradientButton>
-            </Card>
-          ))}
         </div>
         
         {/* Stats Row */}
