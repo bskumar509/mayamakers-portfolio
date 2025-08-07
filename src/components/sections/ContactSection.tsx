@@ -6,9 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Clock, Send, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 export const ContactSection = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     projectType: '',
@@ -22,7 +24,7 @@ export const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -34,18 +36,42 @@ export const ContactSection = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours."
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      email: '',
-      projectType: '',
-      message: ''
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          email: formData.email,
+          projectType: formData.projectType,
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you within 24 hours."
+      });
+
+      // Reset form
+      setFormData({
+        email: '',
+        projectType: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly at mayamakers@gmail.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scheduleCall = () => {
@@ -119,9 +145,9 @@ export const ContactSection = () => {
                 />
               </div>
               
-              <GradientButton type="submit" size="lg" className="w-full group">
+              <GradientButton type="submit" size="lg" className="w-full group" disabled={isSubmitting}>
                 <Send className="mr-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </GradientButton>
             </form>
           </Card>
