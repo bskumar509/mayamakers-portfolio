@@ -10,8 +10,6 @@ import { useToast } from '@/hooks/use-toast';
 export const ContactSection = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
     email: '',
     projectType: '',
     message: ''
@@ -28,7 +26,7 @@ export const ContactSection = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+    if (!formData.email || !formData.message) {
       toast({
         title: "Please fill in all required fields",
         variant: "destructive"
@@ -44,8 +42,6 @@ export const ContactSection = () => {
 
     // Reset form
     setFormData({
-      firstName: '',
-      lastName: '',
       email: '',
       projectType: '',
       message: ''
@@ -64,7 +60,7 @@ export const ContactSection = () => {
     <section className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
-          title="Let's Create Something Amazing"
+          title="Hire Me"
           subtitle="Ready to elevate your brand with culturally conscious marketing and cutting-edge development?"
           className="text-white [&>h2]:text-white [&>p]:text-gray-200"
         />
@@ -75,35 +71,6 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">
-                    First Name
-                  </label>
-                  <Input 
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-                    placeholder="John"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Last Name
-                  </label>
-                  <Input 
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-300"
-                    placeholder="Doe"
-                    required
-                  />
-                </div>
-              </div>
-              
               <div>
                 <label className="block text-sm font-medium text-gray-200 mb-2">
                   Email Address
@@ -127,8 +94,7 @@ export const ContactSection = () => {
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-"
+                  className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="">Select a service</option>
                   <option value="Social-media">Social Media Marketing</option>
