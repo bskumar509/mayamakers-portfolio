@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: Users,
     title: 'Cultural Sensitivity',
-    description: 'Crafting campaigns that resonate across diverse communities and cultures'
+    description: 'Crafting cultural Designs that resonate across diverse communities and cultures'
   },
   {
     icon: Palette,
@@ -49,13 +49,13 @@ export const AboutSection = () => {
             
             <div className="flex flex-wrap gap-3">
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                5+ Years Experience
+                1 Year of Experience
               </span>
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                50+ Successful Campaigns
+                15+ Successful Clint satisfaction
               </span>
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                AI Integration Expert
+                AI Integration Expert in Designs
               </span>
             </div>
           </div>
