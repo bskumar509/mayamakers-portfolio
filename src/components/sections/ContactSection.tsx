@@ -127,7 +127,7 @@ export const ContactSection = () => {
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white"
+                  className="w-full p-3 rounded-lg bg-black/10 border border-white/20 text-white"
                 >
                   <option value="">Select a service</option>
                   <option value="social-media">Social Media Marketing</option>
@@ -168,7 +168,7 @@ export const ContactSection = () => {
                   <Mail className="h-6 w-6 text-white mr-4 group-hover:scale-110 transition-transform" />
                   <div>
                     <h4 className="font-semibold text-white">Email</h4>
-                    <p className="text-gray-200">hello@yourportfolio.com</p>
+                    <p className="text-gray-200">mayamakers@gmail.com</p>
                   </div>
                 </div>
               </Card>
@@ -178,7 +178,7 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-white mr-4 group-hover:scale-110 transition-transform" />
                   <div>
                     <h4 className="font-semibold text-white">Phone</h4>
-                    <p className="text-gray-200">+1 (555) 123-4567</p>
+                    <p className="text-gray-200">+91 7093100179 , +91 7093832950</p>
                   </div>
                 </div>
               </Card>
@@ -188,7 +188,7 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-white mr-4 group-hover:scale-110 transition-transform" />
                   <div>
                     <h4 className="font-semibold text-white">Location</h4>
-                    <p className="text-gray-200">Available Worldwide</p>
+                    <p className="text-gray-200">Available In TG / AP </p>
                   </div>
                 </div>
               </Card>
@@ -204,7 +204,7 @@ export const ContactSection = () => {
               <div className="space-y-3 text-gray-200">
                 <div className="flex justify-between">
                   <span>Response Time</span>
-                  <span className="text-white font-medium">Within 2 hours</span>
+                  <span className="text-white font-medium">Within 12 hours</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Project Start</span>
@@ -212,7 +212,7 @@ export const ContactSection = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Time Zone</span>
-                  <span className="text-white font-medium">UTC-5 to UTC+8</span>
+                  <span className="text-white font-medium">IST +5:30 </span>
                 </div>
               </div>
               
@@ -231,7 +231,7 @@ export const ContactSection = () => {
             <Card className="p-6 bg-white/10 backdrop-blur-lg border border-white/20 text-center">
               <h4 className="font-semibold text-white mb-4">Let's Connect</h4>
               <p className="text-gray-200 text-sm mb-4">
-                Join 500+ satisfied clients who trust me with their digital presence
+                Join 25+ satisfied clients who trust me with their digital presence
               </p>
               <div className="flex justify-center space-x-4">
                 <div className="text-center">
@@ -239,7 +239,7 @@ export const ContactSection = () => {
                   <div className="text-xs text-gray-300">Avg Response</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">98%</div>
+                  <div className="text-2xl font-bold text-white">95%</div>
                   <div className="text-xs text-gray-300">Success Rate</div>
                 </div>
                 <div className="text-center">
