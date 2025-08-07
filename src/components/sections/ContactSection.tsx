@@ -120,21 +120,22 @@ export const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-2">
+                <label className="block text-sm font-medium text-white mb-2">
                   Project Type
                 </label>
                 <select 
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-black/10 border border-white/20 text-white"
+                  className="w-full p-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+"
                 >
                   <option value="">Select a service</option>
-                  <option value="social-media">Social Media Marketing</option>
-                  <option value="design">Post Design</option>
-                  <option value="frontend">Frontend Development</option>
-                  <option value="ai-integration">AI Integration</option>
-                  <option value="full-package">Complete Package</option>
+                  <option value="Social-media">Social Media Marketing</option>
+                  <option value="Design">Post Design</option>
+                  <option value="Frontend">Frontend Development</option>
+                  <option value="Ai-integration">AI Integration</option>
+                  <option value="Full-package">Complete Package</option>
                 </select>
               </div>
               
