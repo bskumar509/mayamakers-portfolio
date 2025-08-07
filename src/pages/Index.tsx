@@ -43,7 +43,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8 px-6 text-center">
         <p className="text-sm">
-          © 2024 Portfolio. Crafted with passion and precision.
+          © 2025 MayaMakers Portfolio. Crafted with passion and precision.
         </p>
       </footer>
     </div>
