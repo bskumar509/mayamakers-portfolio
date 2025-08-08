@@ -5,7 +5,6 @@ import { GradientButton } from '@/components/ui/gradient-button';
 const navigationItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Campaigns', href: '#campaigns' },
   { name: 'Design', href: '#design' },
   { name: 'Projects', href: '#projects' },
   { name: 'Testimonials', href: '#testimonials' },
@@ -18,7 +17,7 @@ export const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 80);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,7 +46,7 @@ export const Navigation = () => {
               <span className={`transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}>
-                Portfolio
+                MayaMakers 
               </span>
             </div>
 
@@ -66,15 +65,7 @@ export const Navigation = () => {
                   {item.name}
                 </button>
               ))}
-              <GradientButton 
-                size="sm" 
-                onClick={() => scrollToSection('#contact')}
-                className="ml-4"
-              >
-                Hire Me
-              </GradientButton>
-            </div>
-
+              
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -108,14 +99,7 @@ export const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <div className="pt-4">
-              <GradientButton 
-                size="lg" 
-                onClick={() => scrollToSection('#contact')}
-                className="w-full"
-              >
-                Hire Me
-              </GradientButton>
+            
             </div>
           </div>
         </div>
