@@ -8,20 +8,20 @@ const GALLERY_URL = 'https://github.com/bskumar509/Designs'; // TODO: replace wi
 
 const designCategories = [
   {
-    title: 'Festival Celebrations',
+    title: 'Festival Celebrations ',
     count: '25+ Designs',
     description: 'Culturally authentic designs for Diwali, Eid, Chinese New Year, and more',
     features: ['Traditional Elements', 'Modern Typography', 'Color Psychology']
   },
   {
-    title: 'Brand Campaigns',
-    count: '40+ Projects',
+    title: 'Brand Campaigns & Handles',
+    count: '15+ Projects',
     description: 'Sophisticated brand storytelling through visual design excellence',
     features: ['Brand Consistency', 'Visual Hierarchy', 'Conversion Focus']
   },
   {
     title: 'Educational Content',
-    count: '30+ Series',
+    count: '10+ Series',
     description: 'Engaging infographics and educational posts that simplify complex topics',
     features: ['Data Visualization', 'Clear Messaging', 'Accessibility']
   }
@@ -39,7 +39,7 @@ const designPrinciples = [
 export const PostDesignSection = () => {
   return (
     <section className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader 
           title="Post Design Showcase"
           subtitle="Where aesthetic beauty meets strategic communication to create visually compelling content"
