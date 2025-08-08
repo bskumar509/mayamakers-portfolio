@@ -4,53 +4,45 @@ import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Sarah Chen',
-    role: 'Marketing Director',
-    company: 'Cultural Bridges Inc',
+    name: 'Kayan redddy',
+    role: 'Managing Director',
+    company: 'SRI VENKATA SAI DURGA ENTERPRISES',
     content: 'Their understanding of cultural nuances in social media marketing is exceptional. Our Lunar New Year campaign achieved a 300% increase in engagement while maintaining complete cultural authenticity.',
     rating: 5,
     avatar: 'SC'
   },
   {
-    name: 'Ahmed Hassan',
-    role: 'Brand Manager',
-    company: 'Unity Digital',
-    content: 'The AI-integrated frontend solutions they developed transformed our user experience. The multimodal capabilities and seamless React implementation exceeded all expectations.',
+    name: 'Dr. M.Lakshmi Lavanya',
+    role: 'Hospital Owner',
+    company: 'Aswini Psychotherapy',
+    content: 'The posts and videos you’ve created for us feels so thoughtful and calming—they really reflect the heart of what we do.It’s not just design; it’s meaningful. We’re genuinely happy with how everything is coming together.',
     rating: 5,
     avatar: 'AH'
   },
   {
-    name: 'Maria Rodriguez',
-    role: 'Creative Director',
-    company: 'Festival Media Group',
-    content: 'Outstanding post designs that perfectly capture the essence of cultural celebrations. Their work on our Día de los Muertos campaign was both visually stunning and culturally respectful.',
+    name: 'Siva Karthik',
+    role: 'Managing Director',
+    company: 'KSK Constructions',
+    content: 'We’re really impressed with how our Instagram is shaping up. The posts and videos you’ve created for KSK Constructions are clean, professional, and well thought out',
     rating: 5,
     avatar: 'MR'
   },
   {
-    name: 'David Park',
-    role: 'Tech Lead',
-    company: 'Innovation Labs',
-    content: 'Their technical expertise in React and AI integration is top-notch. They delivered a scalable, performant application with clean code and excellent documentation.',
+    name: 'Uday',
+    role: 'Proprietor ',
+    company: 'Varahi Boutique',
+    content: 'The posts and videos are beautifully designed and perfectly reflect our brand. It’s clear that a lot of thought and creativity goes into each one, and we’re really happy with how everything is being maintained.',
     rating: 5,
     avatar: 'DP'
   },
   {
-    name: 'Priya Sharma',
-    role: 'Social Media Manager',
-    company: 'Global Connect',
-    content: 'Working with them on our Diwali campaign was incredible. They understood the cultural significance and created content that resonated deeply with our diverse audience.',
+    name: 'Ashok ',
+    role: 'Proprietor',
+    company: 'RR BOOKS & Stationery',
+    content: 'Working with them on our Business was incredible. They understood the significance and created content that resonated deeply with our diverse audience.',
     rating: 5,
     avatar: 'PS'
   },
-  {
-    name: 'Alex Thompson',
-    role: 'Startup Founder',
-    company: 'NextGen Apps',
-    content: 'They single-handedly built our entire frontend with AI capabilities. The attention to detail, performance optimization, and user experience is phenomenal.',
-    rating: 5,
-    avatar: 'AT'
-  }
 ];
 
 export const TestimonialsSection = () => {
@@ -59,7 +51,7 @@ export const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
           title="Client Testimonials"
-          subtitle="Trusted by brands and startups worldwide for delivering exceptional results with cultural sensitivity and technical excellence"
+          subtitle="Trusted by Clints and startups for delivering exceptional results with cultural Marketing and technical excellence"
         />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -112,11 +104,11 @@ export const TestimonialsSection = () => {
         <div className="mt-16 text-center animate-fade-in">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl font-bold text-foreground mb-2">50+</div>
+              <div className="text-3xl font-bold text-foreground mb-2">20+</div>
               <div className="text-sm text-muted-foreground">Happy Clients</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-foreground mb-2">5.0</div>
+              <div className="text-3xl font-bold text-foreground mb-2">4.8</div>
               <div className="text-sm text-muted-foreground">Average Rating</div>
             </div>
             <div>
