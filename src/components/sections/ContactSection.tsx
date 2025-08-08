@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Clock, Send, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -28,9 +29,10 @@ export const ContactSection = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.email || !formData.message) {
+    if (!formData.email || !formData.projectType || !formData.message) {
       toast({
         title: "Please fill in all required fields",
+        description: "Email, project type, and message are required.",
         variant: "destructive"
       });
       return;
@@ -116,19 +118,33 @@ export const ContactSection = () => {
                 <label className="block text-sm font-medium text-white mb-2">
                   Project Type
                 </label>
-                <select 
-                  name="projectType"
+                <ToggleGroup
+                  type="single"
                   value={formData.projectType}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                  onValueChange={(value) =>
+                    setFormData((prev) => ({ ...prev, projectType: value }))
+                  }
+                  variant="outline"
+                  size="sm"
+                  className="justify-start flex-wrap gap-2 animate-fade-in"
+                  aria-label="Select project type"
                 >
-                  <option value="">Select a service</option>
-                  <option value="Social-media">Social Media Marketing</option>
-                  <option value="Design">Post Design</option>
-                  <option value="Frontend">Frontend Development</option>
-                  <option value="Ai-integration">AI Integration</option>
-                  <option value="Full-package">Complete Package</option>
-                </select>
+                  <ToggleGroupItem value="Social-media" className="hover-scale">
+                    Social Media Marketing
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="Design" className="hover-scale">
+                    Post Design
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="Frontend" className="hover-scale">
+                    Frontend Development
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="Ai-integration" className="hover-scale">
+                    AI Integration
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="Full-package" className="hover-scale">
+                    Complete Package
+                  </ToggleGroupItem>
+                </ToggleGroup>
               </div>
               
               <div>
