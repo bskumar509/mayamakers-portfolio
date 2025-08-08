@@ -12,22 +12,16 @@ const designCategories = [
     features: ['Traditional Elements', 'Modern Typography', 'Color Psychology']
   },
   {
-    title: 'Start up Designs',
-    count: '5+ Projects',
+    title: 'Brand Campaigns',
+    count: '40+ Projects',
     description: 'Sophisticated brand storytelling through visual design excellence',
     features: ['Brand Consistency', 'Visual Hierarchy', 'Conversion Focus']
   },
   {
-    title: 'Content designs',
+    title: 'Educational Content',
     count: '30+ Series',
     description: 'Engaging infographics and educational posts that simplify complex topics',
     features: ['Data Visualization', 'Clear Messaging', 'Accessibility']
-  },
-  {
-    title: 'Invitations',
-    count: '10+ Series',
-    description: 'Engaging infographics and educational posts that simplify complex topics',
-    features: ['Data Clarification', 'Clear Audio', 'Video visualization']
   }
 ];
 
@@ -61,22 +55,13 @@ export const PostDesignSection = () => {
             <h3 className="text-3xl font-bold mb-2">Design Portfolio</h3>
             <p className="text-lg opacity-90">Crafting visual stories that resonate</p>
           </div>
-         <div className="absolute bottom-8 right-8">
-  <a
-    href="https://github.com/bskumar509/Designs"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <GradientButton
-      variant="outline"
-      className="text-white border-white hover:bg-white hover:text-black"
-    >
-      <Eye className="mr-2 h-4 w-4" />
-      View Git Gallery
-    </GradientButton>
-  </a>
-</div>
-
+          <div className="absolute bottom-8 right-8">
+            <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+              <Eye className="mr-2 h-4 w-4" />
+              View Full Gallery
+            </GradientButton>
+          </div>
+        </div>
         
         {/* Design Categories */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
