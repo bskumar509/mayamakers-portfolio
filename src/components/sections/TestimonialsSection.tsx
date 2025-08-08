@@ -6,9 +6,8 @@ const testimonials = [
   {
     name: 'Kayan redddy',
     role: 'Managing Director',
-    company: 'SRI VENKATA SAI DURGA ENTERPRISES',
-    content: 'Their understanding of cultural nuances in social media marketing is exceptional. Our Lunar New Year campaign achieved a 300% increase in engagement while maintaining complete cultural authenticity.',
-    rating: 5,
+    company: 'Sri Venkata Sai Durga Enterprises',
+    content: 'Their understanding of cultural nuances in social media marketing is exceptional and making the audiance atract through the posts and videos were excellent and good. ',
     avatar: 'SC'
   },
   {
