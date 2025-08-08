@@ -53,25 +53,28 @@ export const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navigationItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`font-medium transition-colors duration-300 hover:scale-105 transform ${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white hover:text-gray-200'
-                  }`}
-                >
-                  {item.name}
-                </button>
+                item.name === 'Contact' ? (
+                  <GradientButton
+                    key={item.name}
+                    size="sm"
+                    onClick={() => scrollToSection(item.href)}
+                  >
+                    {item.name}
+                  </GradientButton>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className={`font-medium transition-colors duration-300 hover:scale-105 transform ${
+                      isScrolled 
+                        ? 'text-foreground hover:text-primary' 
+                        : 'text-white hover:text-gray-200'
+                    }`}
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
-              <GradientButton 
-                size="sm" 
-                onClick={() => scrollToSection('#contact')}
-                className="ml-4"
-              >
-                Hire Me
-              </GradientButton>
             </div>
 
             {/* Mobile Menu Button */}
@@ -99,23 +102,25 @@ export const Navigation = () => {
         }`}>
           <div className="px-6 py-8 space-y-4">
             {navigationItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left font-medium text-foreground hover:text-primary transition-colors py-2"
-              >
-                {item.name}
-              </button>
+              item.name === 'Contact' ? (
+                <GradientButton
+                  key={item.name}
+                  size="lg"
+                  onClick={() => scrollToSection(item.href)}
+                  className="w-full"
+                >
+                  {item.name}
+                </GradientButton>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left font-medium text-foreground hover:text-primary transition-colors py-2"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
-            <div className="pt-4">
-              <GradientButton 
-                size="lg" 
-                onClick={() => scrollToSection('#contact')}
-                className="w-full"
-              >
-                Hire Me
-              </GradientButton>
-            </div>
           </div>
         </div>
       </div>
