@@ -5,7 +5,6 @@ import { GradientButton } from '@/components/ui/gradient-button';
 const navigationItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Campaigns', href: '#campaigns' },
   { name: 'Design', href: '#design' },
   { name: 'Projects', href: '#projects' },
   { name: 'Testimonials', href: '#testimonials' },
@@ -47,7 +46,7 @@ export const Navigation = () => {
               <span className={`transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}>
-                Portfolio
+                MayaMakers
               </span>
             </div>
 
