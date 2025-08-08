@@ -56,11 +56,17 @@ export const PostDesignSection = () => {
             <p className="text-lg opacity-90">Crafting visual stories that resonate</p>
           </div>
           <div className="absolute bottom-8 right-8">
-            <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+            <a
+              href="https://github.com/bskumar509/Designs"
+              target="_blank"
+              rel="noopener noreferrer"
+             >
+             <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
               <Eye className="mr-2 h-4 w-4" />
               View Full Gallery
-            </GradientButton>
-          </div>
+             </GradientButton>
+            </div>
+          </a>
         </div>
         
         {/* Design Categories */}
