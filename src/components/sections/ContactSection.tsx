@@ -88,8 +88,8 @@ export const ContactSection = () => {
     <section className="py-20 px-6 bg-gradient-hero">
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
-          title="Hire Me"
-          subtitle="Ready to elevate your brand with culturally conscious marketing and cutting-edge development?"
+          title="Contact Me"
+          subtitle="Ready to elevate your brand with culturally or AI  mrketing and cutting-edge development"
           className="text-white [&>h2]:text-white [&>p]:text-gray-200"
         />
         
