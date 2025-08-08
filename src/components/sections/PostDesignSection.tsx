@@ -4,7 +4,7 @@ import { GradientButton } from '@/components/ui/gradient-button';
 import { Eye, Download, Layers } from 'lucide-react';
 import postDesignsImage from '@/assets/post-designs.jpg';
 
-const GALLERY_URL = 'https://example.com/gallery'; // TODO: replace with your real gallery URL
+const GALLERY_URL = 'https://github.com/bskumar509/Designs'; // TODO: replace with your real gallery URL
 
 const designCategories = [
   {
@@ -61,7 +61,7 @@ export const PostDesignSection = () => {
             <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
               <a href={GALLERY_URL} target="_blank" rel="noopener noreferrer" aria-label="View full design gallery">
                 <Eye className="mr-2 h-4 w-4" />
-                View Full Gallery
+                View Git Gallery
               </a>
             </GradientButton>
           </div>
@@ -96,10 +96,6 @@ export const PostDesignSection = () => {
                   </div>
                 ))}
               </div>
-              
-              <GradientButton variant="ghost" size="sm" className="w-full">
-                Explore Designs
-              </GradientButton>
             </Card>
           ))}
         </div>
