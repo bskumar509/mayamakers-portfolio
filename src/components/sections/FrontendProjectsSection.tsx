@@ -5,8 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Cpu, Zap, Globe } from 'lucide-react';
 import frontendProjectsImage from '@/assets/frontend-projects.jpg';
 
-const HERO_REPO_URL = 'https://github.com/bskumar509'; // TODO: replace with your repo URL
-const HERO_LIVE_URL = 'https://lovable.dev/projects/97b1f49c-e129-4572-bdb7-62782ae8792d'; // TODO: replace with your live demo URL
+const HERO_REPO_URL = 'https://github.com/your-username/your-repo'; // TODO: replace with your repo URL
+const HERO_LIVE_URL = 'https://your-live-demo.com'; // TODO: replace with your live demo URL
 
 const projects = [
   {
@@ -42,12 +42,12 @@ const projects = [
 ];
 
 const technologies = [
-  { name: 'React.js', level: 85 },
+  { name: 'React.js', level: 95 },
   { name: 'TypeScript', level: 90 },
   { name: 'TailwindCSS', level: 95 },
-  { name: 'AI Integration', level: 95 },
-  { name: 'Next.js', level: 85 },
-  { name: 'Node.js', level: 80 }
+  { name: 'AI Integration', level: 85 },
+  { name: 'Next.js', level: 88 },
+  { name: 'Node.js', level: 82 }
 ];
 
 export const FrontendProjectsSection = () => {
@@ -56,7 +56,7 @@ export const FrontendProjectsSection = () => {
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
           title="AI-Integrated Frontend Projects"
-          subtitle="Building scalable AI applications with cutting-edge AI capabilities and modern development practices"
+          subtitle="Building scalable React applications with cutting-edge AI capabilities and modern development practices"
         />
         
         {/* Featured Project Display */}
@@ -74,6 +74,20 @@ export const FrontendProjectsSection = () => {
                 Leveraging React, TypeScript, and AI APIs to create intelligent, 
                 responsive applications that scale effortlessly.
               </p>
+              <div className="flex gap-4">
+                <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <a href={HERO_REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="View featured repository">
+                    <Github className="mr-2 h-4 w-4" />
+                    View Repository
+                  </a>
+                </GradientButton>
+                <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <a href={HERO_LIVE_URL} target="_blank" rel="noopener noreferrer" aria-label="Open featured live demo">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Live Demo
+                  </a>
+                </GradientButton>
+              </div>
             </div>
           </div>
         </div>
