@@ -5,8 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Cpu, Zap, Globe } from 'lucide-react';
 import frontendProjectsImage from '@/assets/frontend-projects.jpg';
 
-const HERO_REPO_URL = 'https://github.com/your-username/your-repo'; // TODO: replace with your repo URL
-const HERO_LIVE_URL = 'https://your-live-demo.com'; // TODO: replace with your live demo URL
+const HERO_REPO_URL = 'https://github.com/bskumar509'; // TODO: replace with your repo URL
+const HERO_LIVE_URL = 'https://lovable.dev/projects/97b1f49c-e129-4572-bdb7-62782ae8792d'; // TODO: replace with your live demo URL
 
 const projects = [
   {
@@ -15,9 +15,7 @@ const projects = [
     tech: ['React', 'TypeScript', 'OpenAI API', 'TailwindCSS', 'Supabase'],
     features: ['Voice to Text', 'Image Generation', 'Content Optimization', 'Multi-language Support'],
     status: 'Live Production',
-    type: 'AI Integration',
-    repoUrl: 'https://github.com/your-username/ai-content-generator',
-    liveUrl: 'https://your-demo.com/ai-content-generator'
+    type: 'AI Integration'
   },
   {
     title: 'Cultural Events Platform',
@@ -26,8 +24,7 @@ const projects = [
     features: ['Event Discovery', 'Cultural Filters', 'Real-time Chat', 'Mobile-first Design'],
     status: 'In Development',
     type: 'Full Stack',
-    repoUrl: 'https://github.com/your-username/cultural-events-platform',
-    liveUrl: 'https://your-demo.com/cultural-events'
+ 
   },
   {
     title: 'Design System Library',
@@ -36,8 +33,6 @@ const projects = [
     features: ['Accessibility First', 'Cultural Themes', 'Dark Mode', 'Animation System'],
     status: 'Open Source',
     type: 'Design System',
-    repoUrl: 'https://github.com/your-username/design-system-library',
-    liveUrl: 'https://your-demo.com/design-system'
   }
 ];
 
