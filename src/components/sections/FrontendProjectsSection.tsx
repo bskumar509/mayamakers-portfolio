@@ -5,6 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Cpu, Zap, Globe } from 'lucide-react';
 import frontendProjectsImage from '@/assets/frontend-projects.jpg';
 
+const HERO_REPO_URL = 'https://github.com/your-username/your-repo'; // TODO: replace with your repo URL
+const HERO_LIVE_URL = 'https://your-live-demo.com'; // TODO: replace with your live demo URL
+
 const projects = [
   {
     title: 'AI Content Generator',
@@ -12,7 +15,9 @@ const projects = [
     tech: ['React', 'TypeScript', 'OpenAI API', 'TailwindCSS', 'Supabase'],
     features: ['Voice to Text', 'Image Generation', 'Content Optimization', 'Multi-language Support'],
     status: 'Live Production',
-    type: 'AI Integration'
+    type: 'AI Integration',
+    repoUrl: 'https://github.com/your-username/ai-content-generator',
+    liveUrl: 'https://your-demo.com/ai-content-generator'
   },
   {
     title: 'Cultural Events Platform',
@@ -20,7 +25,9 @@ const projects = [
     tech: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Vercel'],
     features: ['Event Discovery', 'Cultural Filters', 'Real-time Chat', 'Mobile-first Design'],
     status: 'In Development',
-    type: 'Full Stack'
+    type: 'Full Stack',
+    repoUrl: 'https://github.com/your-username/cultural-events-platform',
+    liveUrl: 'https://your-demo.com/cultural-events'
   },
   {
     title: 'Design System Library',
@@ -28,7 +35,9 @@ const projects = [
     tech: ['React', 'Storybook', 'TailwindCSS', 'TypeScript', 'Rollup'],
     features: ['Accessibility First', 'Cultural Themes', 'Dark Mode', 'Animation System'],
     status: 'Open Source',
-    type: 'Design System'
+    type: 'Design System',
+    repoUrl: 'https://github.com/your-username/design-system-library',
+    liveUrl: 'https://your-demo.com/design-system'
   }
 ];
 
@@ -66,13 +75,17 @@ export const FrontendProjectsSection = () => {
                 responsive applications that scale effortlessly.
               </p>
               <div className="flex gap-4">
-                <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                  <Github className="mr-2 h-4 w-4" />
-                  View Repository
+                <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <a href={HERO_REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="View featured repository">
+                    <Github className="mr-2 h-4 w-4" />
+                    View Repository
+                  </a>
                 </GradientButton>
-                <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Live Demo
+                <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <a href={HERO_LIVE_URL} target="_blank" rel="noopener noreferrer" aria-label="Open featured live demo">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Live Demo
+                  </a>
                 </GradientButton>
               </div>
             </div>
@@ -137,12 +150,30 @@ export const FrontendProjectsSection = () => {
                   {project.status}
                 </Badge>
                 <div className="flex gap-2">
-                  <GradientButton variant="ghost" size="sm">
-                    <Github className="h-4 w-4" />
-                  </GradientButton>
-                  <GradientButton variant="ghost" size="sm">
-                    <ExternalLink className="h-4 w-4" />
-                  </GradientButton>
+                  {project.repoUrl && (
+                    <GradientButton asChild variant="ghost" size="sm">
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View ${project.title} repository`}
+                      >
+                        <Github className="h-4 w-4" />
+                      </a>
+                    </GradientButton>
+                  )}
+                  {project.liveUrl && (
+                    <GradientButton asChild variant="ghost" size="sm">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${project.title} live demo`}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </GradientButton>
+                  )}
                 </div>
               </div>
             </Card>

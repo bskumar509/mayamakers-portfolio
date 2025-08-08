@@ -4,6 +4,8 @@ import { GradientButton } from '@/components/ui/gradient-button';
 import { Eye, Download, Layers } from 'lucide-react';
 import postDesignsImage from '@/assets/post-designs.jpg';
 
+const GALLERY_URL = 'https://example.com/gallery'; // TODO: replace with your real gallery URL
+
 const designCategories = [
   {
     title: 'Festival Celebrations',
@@ -56,9 +58,11 @@ export const PostDesignSection = () => {
             <p className="text-lg opacity-90">Crafting visual stories that resonate</p>
           </div>
           <div className="absolute bottom-8 right-8">
-            <GradientButton variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-              <Eye className="mr-2 h-4 w-4" />
-              View Full Gallery
+            <GradientButton asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+              <a href={GALLERY_URL} target="_blank" rel="noopener noreferrer" aria-label="View full design gallery">
+                <Eye className="mr-2 h-4 w-4" />
+                View Full Gallery
+              </a>
             </GradientButton>
           </div>
         </div>
