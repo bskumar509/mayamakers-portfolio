@@ -8,7 +8,18 @@ import frontendProjectsImage from '@/assets/frontend-projects.jpg';
 const HERO_REPO_URL = 'https://github.com/bskumar509'; // TODO: replace with your repo URL
 const HERO_LIVE_URL = 'https://lovable.dev/projects/97b1f49c-e129-4572-bdb7-62782ae8792d'; // TODO: replace with your live demo URL
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  features: string[];
+  status: string;
+  type: string;
+  repoUrl?: string;
+  liveUrl?: string;
+};
+
+const projects: Project[] = [
   {
     title: 'AI Content Generator',
     description: 'Multimodal AI platform that generates social media content with GPT-4 and DALL-E integration.',
@@ -92,7 +103,7 @@ export const FrontendProjectsSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-fade-in"
+              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-slide-in-right"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex justify-between items-start mb-4">
@@ -176,7 +187,7 @@ export const FrontendProjectsSection = () => {
         </div>
         
         {/* Technology Proficiency */}
-        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant animate-fade-in">
+        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant animate-slide-in-right">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-card-foreground">Technology Proficiency</h3>

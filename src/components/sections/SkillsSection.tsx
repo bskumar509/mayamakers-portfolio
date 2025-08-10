@@ -50,7 +50,7 @@ export const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in"
+              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 animate-slide-in-right"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-2xl font-bold mb-6 text-card-foreground">

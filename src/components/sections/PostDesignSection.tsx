@@ -72,7 +72,7 @@ export const PostDesignSection = () => {
           {designCategories.map((category, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-fade-in"
+              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-slide-in-right"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex justify-between items-start mb-4">
@@ -101,7 +101,7 @@ export const PostDesignSection = () => {
         </div>
         
         {/* Design Principles */}
-        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant animate-fade-in">
+        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant animate-slide-in-right">
           <h3 className="text-2xl font-bold text-center mb-8 text-card-foreground">
             Design Principles I Follow
           </h3>
