@@ -79,7 +79,10 @@ export default {
 				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'fade-in': 'fadeIn 0.6s ease-out',
 				'slide-up': 'slideUp 0.6s ease-out',
-				'scale-in': 'scaleIn 0.4s ease-out'
+					'scale-in': 'scaleIn 0.4s ease-out',
+					'rotate-in': 'rotateIn 0.6s ease-out',
+					'rotate-in-right': 'rotateInRight 0.6s ease-out',
+					'rotate-in-left': 'rotateInLeft 0.6s ease-out'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -119,6 +122,18 @@ export default {
 					'0%': { transform: 'rotateY(0deg)' },
 					'50%': { transform: 'rotateY(90deg)' },
 					'100%': { transform: 'rotateY(0deg)' }
+				},
+				rotateIn: {
+					'0%': { opacity: '0', transform: 'rotate(-3deg) scale(0.98)' },
+					'100%': { opacity: '1', transform: 'rotate(0deg) scale(1)' }
+				},
+				rotateInRight: {
+					'0%': { opacity: '0', transform: 'translateX(24px) rotate(3deg) scale(0.98)' },
+					'100%': { opacity: '1', transform: 'translateX(0) rotate(0deg) scale(1)' }
+				},
+				rotateInLeft: {
+					'0%': { opacity: '0', transform: 'translateX(-24px) rotate(-3deg) scale(0.98)' },
+					'100%': { opacity: '1', transform: 'translateX(0) rotate(0deg) scale(1)' }
 				}
 			}
 		}

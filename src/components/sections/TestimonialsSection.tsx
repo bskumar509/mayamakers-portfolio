@@ -57,7 +57,7 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-            className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-slide-in-right"
+            className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group motion-safe:animate-rotate-in-right motion-reduce:animate-none"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
               {/* Quote Icon */}
@@ -100,7 +100,7 @@ export const TestimonialsSection = () => {
         </div>
         
         {/* Trust Indicators */}
-        <div className="mt-16 text-center animate-slide-in-right">
+        <div className="mt-16 text-center motion-safe:animate-rotate-in-right motion-reduce:animate-none">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="text-3xl font-bold text-foreground mb-2">20+</div>

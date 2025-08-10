@@ -103,7 +103,7 @@ export const FrontendProjectsSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group animate-slide-in-right"
+              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group motion-safe:animate-rotate-in-right motion-reduce:animate-none"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex justify-between items-start mb-4">
@@ -187,7 +187,7 @@ export const FrontendProjectsSection = () => {
         </div>
         
         {/* Technology Proficiency */}
-        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant animate-slide-in-right">
+        <div className="bg-gradient-card rounded-xl p-8 shadow-elegant motion-safe:animate-rotate-in-right motion-reduce:animate-none">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-card-foreground">Technology Proficiency</h3>
