@@ -2,7 +2,7 @@ import { AnimatedRole } from '@/components/ui/animated-role';
 import { GradientButton } from '@/components/ui/gradient-button';
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import heroImage from '@/assets/hero-bg-new.jpg';
-
+import { HeroCanvas } from '@/components/3d/HeroCanvas';
 export const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.querySelector('#contact');
@@ -18,6 +18,7 @@ export const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
+        <HeroCanvas />
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
       </div>
       
