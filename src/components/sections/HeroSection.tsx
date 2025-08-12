@@ -32,7 +32,7 @@ export const HeroSection = () => {
             </span>
           </h1>
           
-          <div className="className="fixed bottom-6 right-6 z-50"">
+          <div className="className="fixed bottom-6 right-6 z-50">
             <GradientButton size="lg" onClick={scrollToContact} className="group">
               <Mail className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
               Get In Touch
