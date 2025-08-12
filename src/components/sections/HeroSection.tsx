@@ -31,31 +31,27 @@ export const HeroSection = () => {
               <AnimatedRole />
             </span>
           </h1>
-      <div className="fixed bottom-6 left-6 z-50 animate-scale-in">
-  <a href="/path/to/your-cv.pdf" download>
-    <GradientButton
-      variant="outline"
-      size="lg"
-      className="group text-white border-white hover:bg-white hover:text-black"
-    >
-      <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-      Download CV
-    </GradientButton>
-  </a>
-</div>
-
-{/* Bottom-Right: Get In Touch Button */}
-<div className="fixed bottom-6 right-6 z-50 animate-scale-in">
-  <GradientButton
-    size="lg"
-    onClick={scrollToContact}
-    className="group"
-  >
-    <Mail className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-    Get In Touch
-  </GradientButton>
-</div>
-</div>
-</section>
-);
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify- right items-buttom animate-scale-in">
+            <GradientButton size="lg" onClick={scrollToContact} className="group">
+              <Mail className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
+              Get In Touch
+            </GradientButton>
+            <div className="fixed bottom-6 left-6 z-50">
+             <a href="/path/to/your-cv.pdf" download>
+             <GradientButton
+              variant="outline"
+              size="lg"
+              className="group text-white border-white hover:bg-white hover:text-black"
+              >
+              <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
+              Download CV
+              </GradientButton>
+             </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
