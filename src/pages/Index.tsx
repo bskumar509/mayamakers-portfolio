@@ -13,56 +13,56 @@ import { ContactSection } from '@/components/sections/ContactSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-subtle">
       <Navigation />
       
       <main>
         <HeroSection />
         
-        <section id="about">
+        <section id="about" className="bg-gradient-subtle">
           <AboutSection />
         </section>
         
-        <section id="skills">
+        <section id="skills" className="bg-gradient-subtle">
           <SkillsSection />
         </section>
 
-        <section id="features">
+        <section id="features" className="bg-gradient-subtle">
           <FeaturesSection />
         </section>
 
-        <section id="integrations">
+        <section id="integrations" className="bg-gradient-subtle">
           <IntegrationsSection />
         </section>
         
-        <section id="design">
+        <section id="design" className="bg-gradient-subtle">
           <PostDesignSection />
         </section>
         
-        <section id="projects">
+        <section id="projects" className="bg-gradient-subtle">
           <FrontendProjectsSection />
         </section>
 
-        <section id="pricing">
+        <section id="pricing" className="bg-gradient-subtle">
           <PricingSection />
         </section>
         
         
-        <section id="testimonials">
+        <section id="testimonials" className="bg-gradient-subtle">
           <TestimonialsSection />
         </section>
         
-        <section id="faq">
+        <section id="faq" className="bg-gradient-subtle">
           <FAQSection />
         </section>
         
-        <section id="contact">
+        <section id="contact" className="bg-gradient-subtle">
           <ContactSection />
         </section>
       </main>
       
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8 px-6 text-center">
+      <footer className="bg-gradient-accent text-primary-foreground py-8 px-6 text-center">
         <p className="text-sm">
           © 2025 MayaMakers Portfolio. Crafted with passion and precision.
         </p>

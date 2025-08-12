@@ -39,7 +39,7 @@ const skillCategories = [
 
 export const SkillsSection = () => {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
           title="Skills & Tools"
