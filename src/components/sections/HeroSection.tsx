@@ -31,17 +31,6 @@ export const HeroSection = () => {
               <AnimatedRole />
             </span>
           </h1>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-            <GradientButton size="lg" onClick={scrollToContact} className="group">
-              <Mail className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              Get In Touch
-            </GradientButton>
-            <GradientButton variant="outline" size="lg" className="group text-white border-white hover:bg-white hover:text-black">
-              <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              Download CV
-            </GradientButton>
-          </div>
         </div>
       </div>
     </section>
