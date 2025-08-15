@@ -5,24 +5,24 @@ import { GradientButton } from '@/components/ui/gradient-button';
 const plans = [
   {
     name: 'Starter',
-    price: '$0',
+    price: '5000₹',
     period: '/mo',
     highlight: 'For personal sites and prototypes',
-    features: ['Basic components', '1 project', 'Email support']
+    features: ['2 posts/week ','monthly analises report','2 vid/m']
   },
   {
-    name: 'Pro',
-    price: '$29',
+    name: 'Intermedia ',
+    price: '8800₹',
     period: '/mo',
     highlight: 'Best for creators & startups',
-    features: ['All Starter features', 'Unlimited projects', 'Priority support', 'Advanced sections']
+    features: ['4 posts/week ','weekly analises report','5 vid/m','Special posts any']
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
     highlight: 'Tailored for your business needs',
-    features: ['Custom design system', 'Onboarding & training', 'SLA & dedicated support']
+    features: ['All Starter features', 'Unlimited projects', 'Priority support', 'Advanced sections']
   }
 ];
 
