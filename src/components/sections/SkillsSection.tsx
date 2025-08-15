@@ -1,38 +1,60 @@
 import { SectionHeader } from '@/components/ui/section-header';
-import { Card } from '@/components/ui/card';
+import { AnimatedCard } from '@/components/ui/animated-card';
 import { Badge } from '@/components/ui/badge';
+import { TechLogo } from '@/components/ui/tech-logo';
+import { CardGrid } from '@/components/ui/card-grid';
 
 const skillCategories = [
   {
     title: 'Social Media Marketing',
     skills: [
-      'Strategy Development', 'Campaign Management', 'Analytics & Insights',
-      'Content Planning', 'Community Management', 'Influencer Partnerships',
-      'Cross-Cultural Marketing', 'Festival Campaigns', 'Audience Targeting'
+      { name: 'Strategy Development', hasLogo: false },
+      { name: 'Campaign Management', hasLogo: false },
+      { name: 'Analytics & Insights', hasLogo: false },
+      { name: 'Content Planning', hasLogo: false },
+      { name: 'Community Management', hasLogo: false },
+      { name: 'Influencer Partnerships', hasLogo: false },
+      { name: 'Cross-Cultural Marketing', hasLogo: false },
+      { name: 'Festival Campaigns', hasLogo: false }
     ]
   },
   {
     title: 'Design & Creative',
     skills: [
-      'Adobe Creative Suite', 'Figma', 'Canva Pro', 'Typography',
-      'Brand Identity', 'Visual Storytelling', 'Motion Graphics',
-      'Cultural Aesthetics', 'Festival Design', 'UI/UX Principles'
+      { name: 'Figma', hasLogo: true },
+      { name: 'Typography', hasLogo: false },
+      { name: 'Brand Identity', hasLogo: false },
+      { name: 'Visual Storytelling', hasLogo: false },
+      { name: 'Motion Graphics', hasLogo: false },
+      { name: 'Cultural Aesthetics', hasLogo: false },
+      { name: 'Festival Design', hasLogo: false },
+      { name: 'UI/UX Principles', hasLogo: false }
     ]
   },
   {
     title: 'Frontend Development',
     skills: [
-      'React.js', 'TypeScript', 'TailwindCSS', 'Next.js',
-      'Responsive Design', 'API Integration', 'Performance Optimization',
-      'AI/ML Integration', 'Multimodal AI', 'OpenAI GPT', 'Claude AI'
+      { name: 'React', hasLogo: true },
+      { name: 'TypeScript', hasLogo: true },
+      { name: 'TailwindCSS', hasLogo: true },
+      { name: 'Responsive Design', hasLogo: false },
+      { name: 'API Integration', hasLogo: false },
+      { name: 'Performance Optimization', hasLogo: false },
+      { name: 'OpenAI', hasLogo: true },
+      { name: 'AI/ML Integration', hasLogo: false }
     ]
   },
   {
     title: 'Tools & Platforms',
     skills: [
-      'Meta Business Suite', 'Google Analytics', 'Hootsuite',
-      'Mailchimp', 'Zapier', 'Notion', 'Slack', 'GitHub',
-      'Vercel', 'AWS', 'Supabase', 'Stripe'
+      { name: 'GitHub', hasLogo: true },
+      { name: 'Vercel', hasLogo: true },
+      { name: 'Supabase', hasLogo: true },
+      { name: 'Stripe', hasLogo: true },
+      { name: 'Slack', hasLogo: true },
+      { name: 'Notion', hasLogo: true },
+      { name: 'Google Analytics', hasLogo: false },
+      { name: 'Zapier', hasLogo: false }
     ]
   }
 ];
@@ -46,31 +68,33 @@ export const SkillsSection = () => {
           subtitle="A comprehensive toolkit spanning marketing strategy, creative design, and cutting-edge development"
         />
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <CardGrid columns={2} gap="lg" className="mt-10">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={index}
-              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 motion-safe:animate-rotate-in-right motion-reduce:animate-none"
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <AnimatedCard 
+              key={category.title}
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={index * 150}
+              className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300"
             >
               <h3 className="text-2xl font-bold mb-6 text-card-foreground">
                 {category.title}
               </h3>
               
               <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
+                {category.skills.map(({ name, hasLogo }) => (
                   <Badge 
-                    key={skillIndex}
+                    key={name}
                     variant="secondary"
-                    className="px-3 py-2 text-sm font-medium hover:scale-105 transition-transform duration-200 cursor-default"
+                    className="px-3 py-2 text-sm font-medium hover:scale-105 transition-transform duration-200 cursor-default flex items-center gap-2"
                   >
-                    {skill}
+                    {hasLogo && <TechLogo name={name} size="sm" className="w-4 h-4" />}
+                    {name}
                   </Badge>
                 ))}
               </div>
-            </Card>
+            </AnimatedCard>
           ))}
-        </div>
+        </CardGrid>
       </div>
     </section>
   );

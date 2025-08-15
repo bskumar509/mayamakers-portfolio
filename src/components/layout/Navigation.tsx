@@ -5,7 +5,6 @@ import { GradientButton } from '@/components/ui/gradient-button';
 const navigationItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Features', href: '#features' },
   { name: 'Integrations', href: '#integrations' },
   { name: 'Design', href: '#design' },
   { name: 'Projects', href: '#projects' },

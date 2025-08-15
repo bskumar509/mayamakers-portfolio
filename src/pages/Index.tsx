@@ -2,7 +2,6 @@ import { Navigation } from '@/components/layout/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
-import { FeaturesSection } from '@/components/sections/FeaturesSection';
 import { IntegrationsSection } from '@/components/sections/IntegrationsSection';
 import { PostDesignSection } from '@/components/sections/PostDesignSection';
 import { FrontendProjectsSection } from '@/components/sections/FrontendProjectsSection';
@@ -25,10 +24,6 @@ const Index = () => {
         
         <section id="skills" className="bg-gradient-subtle">
           <SkillsSection />
-        </section>
-
-        <section id="features" className="bg-gradient-subtle">
-          <FeaturesSection />
         </section>
 
         <section id="integrations" className="bg-gradient-subtle">
