@@ -1,7 +1,6 @@
 import { SectionHeader } from '@/components/ui/section-header';
 import { Card } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
-import { ScrollingCarousel } from '@/components/ui/scrolling-carousel';
 
 const testimonials = [
   {
@@ -53,18 +52,6 @@ export const TestimonialsSection = () => {
           title="Client Testimonials"
           subtitle="Trusted by Clints and startups for delivering exceptional results with cultural Marketing and technical excellence"
         />
-        <div className="mt-4">
-          <ScrollingCarousel direction="left" speed="slow" className="py-4">
-            <div className="flex gap-8 items-center">
-              {[...integrations].reverse().map((name) => (
-                <div key={`reverse-${name}`} className="flex items-center gap-3 px-6 py-3 bg-background/40 backdrop-blur rounded-lg border whitespace-nowrap">
-                  <TechLogo name={name} size="sm" />
-                  <span className="text-sm text-muted-foreground">{name}</span>
-                </div>
-              ))}
-            </div>
-          </ScrollingCarousel>
-        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
@@ -73,7 +60,6 @@ export const TestimonialsSection = () => {
             className="p-8 bg-gradient-card shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105 group motion-safe:animate-rotate-in-right motion-reduce:animate-none"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-              
               {/* Quote Icon */}
               <Quote className="h-8 w-8 text-primary mb-4 opacity-60" />
               
@@ -111,18 +97,6 @@ export const TestimonialsSection = () => {
               </div>
             </Card>
           ))}
-        </div>
-        <div className="mt-4">
-          <ScrollingCarousel direction="left" speed="slow" className="py-4">
-            <div className="flex gap-8 items-center">
-              {[...integrations].reverse().map((name) => (
-                <div key={`reverse-${name}`} className="flex items-center gap-3 px-6 py-3 bg-background/40 backdrop-blur rounded-lg border whitespace-nowrap">
-                  <TechLogo name={name} size="sm" />
-                  <span className="text-sm text-muted-foreground">{name}</span>
-                </div>
-              ))}
-            </div>
-          </ScrollingCarousel>
         </div>
         
         {/* Trust Indicators */}
