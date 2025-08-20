@@ -7,21 +7,21 @@ const plans = [
     name: 'Starter',
     price: '5000₹',
     period: '/mo',
-    highlight: 'For personal sites and prototypes',
+    highlight: '',
     features: ['2 posts/week ','monthly analises report','2 vid/m']
   },
   {
     name: 'Intermedia ',
     price: '8800₹',
     period: '/mo',
-    highlight: 'Best for creators & startups',
+    highlight: '',
     features: ['4 posts/week ','weekly analises report','5 vid/m','Special posts any']
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    highlight: 'Tailored for your business needs',
+    highlight: '',
     features: ['All Starter features', 'Unlimited projects', 'Priority support', 'Advanced sections']
   }
 ];
