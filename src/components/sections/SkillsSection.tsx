@@ -10,51 +10,51 @@ const skillCategories = [
     skills: [
       { name: 'Strategy Development', hasLogo: false },
       { name: 'Campaign Management', hasLogo: false },
-      { name: 'Analytics & Insights', hasLogo: false },
-      { name: 'Content Planning', hasLogo: false },
+      { name: 'Facebook Ads', hasLogo: false },
+      { name: 'Instagram Marketing', hasLogo: false },
+      { name: 'LinkedIn Campaigns', hasLogo: false },
+      { name: 'TikTok Advertising', hasLogo: false },
       { name: 'Community Management', hasLogo: false },
-      { name: 'Influencer Partnerships', hasLogo: false },
-      { name: 'Cross-Cultural Marketing', hasLogo: false },
-      { name: 'Festival Campaigns', hasLogo: false }
+      { name: 'Influencer Partnerships', hasLogo: false }
     ]
   },
   {
-    title: 'Design & Creative',
+    title: 'Content Creation',
     skills: [
       { name: 'Figma', hasLogo: true },
-      { name: 'Typography', hasLogo: false },
-      { name: 'Brand Identity', hasLogo: false },
+      { name: 'Copywriting', hasLogo: false },
       { name: 'Visual Storytelling', hasLogo: false },
-      { name: 'Motion Graphics', hasLogo: false },
-      { name: 'Cultural Aesthetics', hasLogo: false },
-      { name: 'Festival Design', hasLogo: false },
-      { name: 'UI/UX Principles', hasLogo: false }
+      { name: 'Video Content', hasLogo: false },
+      { name: 'Brand Voice', hasLogo: false },
+      { name: 'Cultural Content', hasLogo: false },
+      { name: 'Graphic Design', hasLogo: false },
+      { name: 'Motion Graphics', hasLogo: false }
     ]
   },
   {
-    title: 'Frontend Development',
+    title: 'Analytics & Optimization',
     skills: [
-      { name: 'React', hasLogo: true },
-      { name: 'TypeScript', hasLogo: true },
-      { name: 'TailwindCSS', hasLogo: true },
-      { name: 'Responsive Design', hasLogo: false },
-      { name: 'API Integration', hasLogo: false },
-      { name: 'Performance Optimization', hasLogo: false },
-      { name: 'OpenAI', hasLogo: true },
-      { name: 'AI/ML Integration', hasLogo: false }
+      { name: 'Google Analytics', hasLogo: false },
+      { name: 'Facebook Insights', hasLogo: false },
+      { name: 'Performance Tracking', hasLogo: false },
+      { name: 'A/B Testing', hasLogo: false },
+      { name: 'Conversion Optimization', hasLogo: false },
+      { name: 'ROI Analysis', hasLogo: false },
+      { name: 'Data Visualization', hasLogo: false },
+      { name: 'Campaign Reporting', hasLogo: false }
     ]
   },
   {
-    title: 'Tools & Platforms',
+    title: 'Marketing Tools',
     skills: [
-      { name: 'GitHub', hasLogo: true },
-      { name: 'Vercel', hasLogo: true },
-      { name: 'Supabase', hasLogo: true },
-      { name: 'Stripe', hasLogo: true },
       { name: 'Slack', hasLogo: true },
       { name: 'Notion', hasLogo: true },
-      { name: 'Google Analytics', hasLogo: false },
-      { name: 'Zapier', hasLogo: false }
+      { name: 'Hootsuite', hasLogo: false },
+      { name: 'Buffer', hasLogo: false },
+      { name: 'Canva', hasLogo: false },
+      { name: 'Mailchimp', hasLogo: false },
+      { name: 'HubSpot', hasLogo: false },
+      { name: 'SEMrush', hasLogo: false }
     ]
   }
 ];
@@ -64,8 +64,8 @@ export const SkillsSection = () => {
     <section className="py-20 px-6 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
-          title="Skills & Tools"
-          subtitle="A comprehensive toolkit spanning marketing strategy, creative design, and cutting-edge development"
+          title="Skills & Expertise"
+          subtitle="Comprehensive digital marketing skills to drive growth and engagement across all platforms"
         />
         
         <CardGrid columns={2} gap="lg" className="mt-10">

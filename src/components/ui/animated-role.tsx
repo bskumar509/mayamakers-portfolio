@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const roles = [
-  'Social Media Marketer',
-  'Post Designer',
-  'AI Frontend Developer'
+  'Digital Marketing Strategist',
+  'Social Media Expert', 
+  'Content Creator',
+  'Campaign Manager'
 ];
 
 export const AnimatedRole = () => {

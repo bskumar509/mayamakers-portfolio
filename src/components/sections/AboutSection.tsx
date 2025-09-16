@@ -1,27 +1,27 @@
 import { SectionHeader } from '@/components/ui/section-header';
 import { Card } from '@/components/ui/card';
-import { Users, Palette, Code, TrendingUp } from 'lucide-react';
+import { Users, Target, BarChart3, TrendingUp } from 'lucide-react';
 
 const highlights = [
   {
     icon: Users,
-    title: 'Cultural Sensitivity',
-    description: 'Crafting cultural Designs that resonate across diverse communities and cultures'
+    title: 'Cultural Marketing',
+    description: 'Creating authentic campaigns that resonate across diverse communities and cultures'
   },
   {
-    icon: Palette,
-    title: 'Creative Design',
-    description: 'Developing visually stunning posts that capture attention and drive engagement'
+    icon: Target,
+    title: 'Strategic Campaigns',
+    description: 'Developing data-driven marketing strategies that maximize ROI and engagement'
   },
   {
-    icon: Code,
-    title: 'Technical Innovation',
-    description: 'Building scalable React applications with cutting-edge AI integrations'
+    icon: BarChart3,
+    title: 'Analytics Expert',
+    description: 'Turning complex data insights into actionable marketing strategies for growth'
   },
   {
     icon: TrendingUp,
-    title: 'Results-Driven',
-    description: 'Delivering measurable growth through strategic marketing and design excellence'
+    title: 'Growth Focused',
+    description: 'Delivering measurable results through strategic digital marketing excellence'
   }
 ];
 
@@ -31,31 +31,31 @@ export const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <SectionHeader 
           title="About Me"
-          subtitle="Passionate about creating meaningful digital experiences that bridge creativity and technology"
+          subtitle="Passionate digital marketing strategist specializing in cultural campaigns and data-driven growth"
         />
         
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6 animate-fade-in">
             <p className="text-lg text-foreground leading-relaxed">
-              As a multidisciplinary creative professional, I specialize in the intersection of social media marketing, 
-              visual design, and frontend development. My approach combines data-driven strategies with artistic intuition 
-              to create campaigns and applications that not only look stunning but deliver exceptional results.
+              As a dedicated digital marketing strategist, I specialize in creating culturally-aware campaigns that drive 
+              real business growth. My expertise spans social media marketing, content creation, and performance analytics 
+              to deliver campaigns that not only engage audiences but convert them into loyal customers.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With a deep understanding of cultural nuances and emerging technologies, I help brands connect authentically 
-              with their audiences while building robust, scalable digital solutions that stand the test of time.
+              With deep cultural insights and data-driven approach, I help brands authentically connect with diverse 
+              audiences through strategic storytelling, targeted advertising, and measurable marketing solutions.
             </p>
             
             <div className="flex flex-wrap gap-3">
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                1 Year of Experience
+                2+ Years Experience
               </span>
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                15+ Successful Clint satisfaction
+                50+ Campaigns Delivered
               </span>
               <span className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium">
-                AI Integration Expert in Designs
+                300% Average ROI Growth
               </span>
             </div>
           </div>

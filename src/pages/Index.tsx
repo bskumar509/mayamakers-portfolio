@@ -4,7 +4,6 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
 import { IntegrationsSection } from '@/components/sections/IntegrationsSection';
 import { PostDesignSection } from '@/components/sections/PostDesignSection';
-import { FrontendProjectsSection } from '@/components/sections/FrontendProjectsSection';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { FAQSection } from '@/components/sections/FAQSection';
@@ -32,10 +31,6 @@ const Index = () => {
         
         <section id="design" className="bg-gradient-subtle">
           <PostDesignSection />
-        </section>
-        
-        <section id="projects" className="bg-gradient-subtle">
-          <FrontendProjectsSection />
         </section>
 
         <section id="pricing" className="bg-gradient-subtle">

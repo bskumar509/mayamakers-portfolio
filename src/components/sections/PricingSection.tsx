@@ -5,24 +5,46 @@ import { GradientButton } from '@/components/ui/gradient-button';
 const plans = [
   {
     name: 'Starter',
-    price: '5000₹',
+    price: '15,000₹',
     period: '/mo',
-    highlight: '',
-    features: ['2 posts/week ','monthly analises report','2 vid/m']
+    highlight: 'Perfect for small businesses',
+    features: [
+      '15 posts per month',
+      '2 platforms management',
+      'Monthly analytics report',
+      'Basic content calendar',
+      'Email support'
+    ]
   },
   {
-    name: 'Intermedia ',
-    price: '8800₹',
+    name: 'Professional',
+    price: '25,000₹',
     period: '/mo',
-    highlight: '',
-    features: ['4 posts/week ','weekly analises report','5 vid/m','Special posts any']
+    highlight: 'Most popular choice',
+    features: [
+      '30 posts per month',
+      '4 platforms management',
+      'Weekly analytics reports',
+      'Advanced content strategy',
+      'Video content (5/month)',
+      'Paid ads management',
+      'Priority support'
+    ]
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    highlight: '',
-    features: ['All Starter features', 'Unlimited projects', 'Priority support', 'Advanced sections']
+    highlight: 'For growing businesses',
+    features: [
+      'Unlimited posts',
+      'Multi-platform campaigns',
+      'Daily performance tracking',
+      'Custom content creation',
+      'Influencer partnerships',
+      'Dedicated account manager',
+      '24/7 support'
+    ]
   }
 ];
 
@@ -30,7 +52,7 @@ export const PricingSection = () => {
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeader title="Transparent Pricing" subtitle="Simple plans that grow with you." />
+        <SectionHeader title="Marketing Services" subtitle="Comprehensive digital marketing packages designed to drive growth." />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {plans.map((plan) => (
             <Card key={plan.name} className="p-6 bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/50 motion-safe:animate-rotate-in-right">

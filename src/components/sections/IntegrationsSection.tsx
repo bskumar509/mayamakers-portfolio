@@ -3,16 +3,19 @@ import { TechLogo } from '@/components/ui/tech-logo';
 import { ScrollingCarousel } from '@/components/ui/scrolling-carousel';
 
 const integrations = [
-  'Supabase',
-  'Stripe', 
-  'OpenAI',
-  'Vercel',
-  'GitHub',
+  'Facebook',
+  'Instagram',
+  'LinkedIn', 
+  'TikTok',
+  'YouTube',
+  'Google Analytics',
+  'Hootsuite',
+  'Buffer',
+  'Canva',
+  'Mailchimp',
+  'HubSpot',
   'Slack',
   'Notion',
-  'TailwindCSS',
-  'React',
-  'TypeScript',
   'Figma'
 ];
 
@@ -21,8 +24,8 @@ export const IntegrationsSection = () => {
     <section className="py-20 md:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          title="Works with your tools"
-          subtitle="Seamlessly integrates with the technologies and services you already use."
+          title="Platform Expertise"
+          subtitle="Expert-level proficiency across all major digital marketing platforms and tools."
         />
         
         {/* Scrolling logo carousel */}
