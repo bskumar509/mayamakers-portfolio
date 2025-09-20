@@ -23,10 +23,12 @@ export const HeroSection = () => {
       
       {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-float" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-32 right-20 w-3 h-3 bg-accent/40 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-40 left-20 w-1 h-1 bg-white/50 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-60 right-40 w-2 h-2 bg-primary-foreground/30 rounded-full animate-float" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-float hidden sm:block" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-32 right-20 w-3 h-3 bg-accent/40 rounded-full animate-float hidden md:block" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 left-20 w-1 h-1 bg-white/50 rounded-full animate-float hidden sm:block" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-60 right-40 w-2 h-2 bg-primary-foreground/30 rounded-full animate-float hidden lg:block" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-blue-400/40 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-purple-400/30 rounded-full animate-float" style={{animationDelay: '2.5s'}}></div>
       </div>
       
       {/* Content */}
@@ -40,7 +42,7 @@ export const HeroSection = () => {
           </div>
           
           {/* Main heading */}
-          <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
             Expert
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               <AnimatedRole />
@@ -48,23 +50,23 @@ export const HeroSection = () => {
           </h1>
           
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light">
             Driving growth through strategic digital marketing, data-driven campaigns, and authentic brand storytelling that converts
           </p>
           
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 py-6">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 py-6">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">50+</div>
-              <div className="text-sm text-gray-300">Campaigns Delivered</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">50+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Campaigns Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">300%</div>
-              <div className="text-sm text-gray-300">Average ROI Growth</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">300%</div>
+              <div className="text-xs sm:text-sm text-gray-300">Average ROI Growth</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">2+</div>
-              <div className="text-sm text-gray-300">Years Experience</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">2+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Years Experience</div>
             </div>
           </div>
           
@@ -85,10 +87,11 @@ export const HeroSection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="flex items-center gap-2 px-6 py-3 text-white border border-white/30 rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              className="flex items-center gap-2 px-6 py-3 text-white border border-white/30 rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm hover:border-white/50"
             >
               <Play className="h-5 w-5" />
-              View Case Studies
+              <span className="hidden sm:inline">View Case Studies</span>
+              <span className="sm:hidden">Portfolio</span>
             </button>
           </div>
           

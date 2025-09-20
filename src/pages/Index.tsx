@@ -29,7 +29,7 @@ const Index = () => {
           <IntegrationsSection />
         </section>
         
-        <section id="design" className="bg-gradient-subtle">
+        <section id="portfolio" className="bg-gradient-subtle">
           <PostDesignSection />
         </section>
 
