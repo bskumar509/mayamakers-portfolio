@@ -67,11 +67,13 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-primary': 'var(--gradient-primary)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)'
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',

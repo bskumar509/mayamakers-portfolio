@@ -3,20 +3,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 const faqs = [
   {
-    q: 'Can you adapt this for my SaaS?',
-    a: 'Absolutely. The sections are modular and can be tailored to your product copy and metrics.'
+    q: 'What platforms do you specialize in?',
+    a: 'I focus on Facebook, Instagram, LinkedIn, TikTok, YouTube, and Google Ads with expertise in cross-platform campaign optimization.'
   },
   {
-    q: 'Do you support integrations?',
-    a: 'Yes. Popular tools like Supabase, Stripe, and OpenAI are supported out of the box.'
+    q: 'How do you measure campaign success?',
+    a: 'I track key metrics including engagement rates, conversion rates, ROI, cost per acquisition, and brand awareness using advanced analytics tools.'
   },
   {
-    q: 'Is the design system customizable?',
-    a: 'Yes. Tokens and components are themeable and built with accessibility in mind.'
+    q: 'Do you provide content creation services?',
+    a: 'Yes, I offer comprehensive content creation including copywriting, visual design, video content, and brand storytelling across all platforms.'
   },
   {
-    q: 'What about performance?',
-    a: 'We optimize for Core Web Vitals and use progressive enhancement for 3D elements.'
+    q: 'What is your typical campaign timeline?',
+    a: 'Campaign setup takes 1-2 weeks, with ongoing optimization and monthly performance reviews. Results typically show within 30-60 days.'
+  },
+  {
+    q: 'Do you work with specific industries?',
+    a: 'I have experience across various industries with particular expertise in cultural marketing and helping brands connect authentically with diverse audiences.'
   }
 ];
 
@@ -24,7 +28,7 @@ export const FAQSection = () => {
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-3xl mx-auto px-6">
-        <SectionHeader title="Frequently Asked Questions" subtitle="Quick answers to common questions." />
+        <SectionHeader title="Frequently Asked Questions" subtitle="Everything you need to know about my digital marketing services." />
         <Accordion type="single" collapsible className="mt-6">
           {faqs.map((f, idx) => (
             <AccordionItem key={idx} value={`item-${idx}`} className="motion-safe:animate-rotate-in-right">
