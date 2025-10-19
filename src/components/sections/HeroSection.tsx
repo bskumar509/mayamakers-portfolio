@@ -1,7 +1,6 @@
 import { AnimatedRole } from '@/components/ui/animated-role';
 import { GradientButton } from '@/components/ui/gradient-button';
-import { ArrowDown, Download, Mail, Play, Star, TrendingUp } from 'lucide-react';
-import heroImage from '@/assets/hero-bg-new.jpg';
+import { ArrowDown, Mail, Play } from 'lucide-react';
 export const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.querySelector('#contact');
@@ -11,70 +10,48 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background with advanced overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-accent/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-      </div>
-      
-      {/* Floating elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-float hidden sm:block" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-32 right-20 w-3 h-3 bg-accent/40 rounded-full animate-float hidden md:block" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-40 left-20 w-1 h-1 bg-white/50 rounded-full animate-float hidden sm:block" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-60 right-40 w-2 h-2 bg-primary-foreground/30 rounded-full animate-float hidden lg:block" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-blue-400/40 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-purple-400/30 rounded-full animate-float" style={{animationDelay: '2.5s'}}></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-accent/5">
+      {/* Simplified background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-        <div className="animate-fade-in space-y-8">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-            <span className="text-white/90 text-sm font-medium">Digital Marketing Expert</span>
-            <TrendingUp className="h-4 w-4 text-green-400" />
-          </div>
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto py-20">
+        <div className="animate-fade-in space-y-6">
           
           {/* Main heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
             Expert
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               <AnimatedRole />
             </span>
           </h1>
           
           {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Driving growth through strategic digital marketing, data-driven campaigns, and authentic brand storytelling that converts
           </p>
           
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 py-6">
+          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 pt-8 pb-6">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">50+</div>
-              <div className="text-xs sm:text-sm text-gray-300">Campaigns Delivered</div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground">50+</div>
+              <div className="text-sm text-muted-foreground mt-1">Campaigns Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">300%</div>
-              <div className="text-xs sm:text-sm text-gray-300">Average ROI Growth</div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground">300%</div>
+              <div className="text-sm text-muted-foreground mt-1">Average ROI Growth</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">2+</div>
-              <div className="text-xs sm:text-sm text-gray-300">Years Experience</div>
+              <div className="text-3xl sm:text-4xl font-bold text-foreground">2+</div>
+              <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
             </div>
           </div>
           
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <GradientButton 
               onClick={scrollToContact}
-              className="px-8 py-4 text-lg font-semibold shadow-glow"
+              className="px-8 py-3 text-base font-semibold"
             >
               <Mail className="mr-2 h-5 w-5" />
               Start Your Campaign
@@ -87,18 +64,16 @@ export const HeroSection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="flex items-center gap-2 px-6 py-3 text-white border border-white/30 rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm hover:border-white/50"
+              className="flex items-center gap-2 px-8 py-3 text-foreground border border-border rounded-lg hover:bg-accent transition-all duration-300"
             >
               <Play className="h-5 w-5" />
-              <span className="hidden sm:inline">View Case Studies</span>
-              <span className="sm:hidden">Portfolio</span>
+              View Case Studies
             </button>
           </div>
           
           {/* Scroll indicator */}
-          <div className="animate-bounce mt-16">
-            <ArrowDown className="h-6 w-6 text-white/70 mx-auto" />
-            <p className="text-white/60 text-sm mt-2">Discover My Work</p>
+          <div className="animate-bounce pt-12">
+            <ArrowDown className="h-5 w-5 text-muted-foreground mx-auto" />
           </div>
         </div>
       </div>
